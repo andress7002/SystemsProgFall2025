@@ -12,7 +12,7 @@ fn celcius_to_fahrenheit(c: f64) -> f64{
 fn main() {
 
     let mut temp_f: f64 = FREEZING_POINT_F;
-    
+
     let temp_c = fahrenheit_to_celcius(temp_f);
     println!("{}°F = {:.2}°C", temp_f, temp_c);
 
@@ -21,4 +21,15 @@ fn main() {
         let temp_c = fahrenheit_to_celcius(temp_f);
         println!("{}°F = {:.2}°C", temp_f, temp_c);
     }
+
+    let mut temp_c: f64 = 0.0;
+    println!("\nNow converting Celsius to Fahrenheit:");
+    println!("{}°C = {:.2}°F", temp_c, celcius_to_fahrenheit(temp_c));
+
+    for _ in 0..5 {
+        temp_c += 1.0;
+        let temp_f = celcius_to_fahrenheit(temp_c);
+        println!("{}°C = {:.2}°F", temp_c, temp_f);
+    }
+    
 }
